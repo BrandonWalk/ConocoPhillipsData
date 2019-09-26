@@ -1,0 +1,85 @@
+---
+title: "hornsdown presentation"
+subtitle: "subtitle"
+author: "Your Name"
+institute: "Department/Course"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, middle, background-maroon
+
+# Slide 1
+
+
+---
+class: left, heading-center, background-maroon
+
+# Slide 2
+
+```{python}
+# python code within the presentation
+
+print("Howdy Ags")
+
+```
+
+
+---
+class: center, background-maroon
+
+# Slide 3
+
+```{r map, message = FALSE, echo = FALSE, out.width='100%', fig.height=6}
+library(leaflet)
+library(tidyverse)
+
+leaflet() %>% addTiles() %>% setView(lat = 30.616227, lng = -96.340548, zoom = 14)
+```
+
+
+---
+class: center, background-blue
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/23/TAMUcampus.jpg)
+background-size: cover
+
+# Slide 4
+
+---
+class: center, background-maroon
+
+# Plot
+
+```{r plot, out.width='100%', fig.height=6, echo = FALSE, message = FALSE}
+library(plotly)
+
+ggplotly(ggplot(iris, aes(Petal.Width, Petal.Length, color=Species)) + 
+    geom_point() + 
+    theme(plot.background = element_rect(fill = "#500000", color = "#500000"), 
+          axis.text = element_text(colour = "white"),
+          axis.title.x = element_text(colour = "white"),
+          axis.title.y = element_text(colour = "white"),
+          panel.background = element_rect(fill = "#FFFFFF",
+                                colour = "#FFFFFF",
+                                size = 2, linetype = "solid"),
+          panel.grid.major = element_line(size = 0.5,
+                                linetype = 'solid',
+                                colour = "black"), 
+          panel.grid.minor = element_line(size = 0.25,
+                                linetype = 'solid',
+                                colour = "black")))
+
+```
+
+

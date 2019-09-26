@@ -1,0 +1,40 @@
+.background-maroon{
+  background-color: #500000;
+  color: white;
+}
+
+.background-white{
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.background-darkgray{
+  background-color: #332C2C;
+  color: white;
+}
+
+.background-lightgray{
+  background-color: #707373;
+  color: white;
+}
+
+.background-blue{
+  background-color: #003C71;
+  color: white;
+}
+
+.title-slide{
+    background-color: #500000;
+    color: white;
+}
+
+img[alt~="logo"]{
+    bottom: 0;
+    left: 10px;
+    position: fixed;
+    height: 10%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+}
